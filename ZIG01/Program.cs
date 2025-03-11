@@ -1,16 +1,17 @@
 ﻿using System.ComponentModel;
 
-public class Zadanie01
+namespace ZIG01;
+
+public static class Zadanie01
 {
     public static void Main(string[] args)
     {
-        Zadanie01 myAplikacja = new Zadanie01();
         int[] tablica = new int[] { 1, 2, 3, 4, 5 };
 
         try
         {
             Console.WriteLine("Argumenty funkcji potega: 2, 2, 2");
-            Console.WriteLine("potega: " + myAplikacja.potega(2, 2, 2));
+            Console.WriteLine("potega: " + potega(2, 2, 2));
         }
         catch (WarningException e)
         {
@@ -23,7 +24,7 @@ public class Zadanie01
             Console.Write(tablica[i] + " ");
         }
         Console.WriteLine("");
-        tablica = myAplikacja.zapiszWTablicy(tablica, 2);
+        tablica = zapiszWTablicy(tablica, 2);
         Console.WriteLine("Tablica po zapiszWTablicy(tablica, 2): ");
         for (int i = 0; i < tablica.Length; i++)
         {
@@ -31,15 +32,15 @@ public class Zadanie01
         }
 
         Console.WriteLine("");
-       Console.WriteLine("=======================");
+        Console.WriteLine("=======================");
 
         var r = 2;
-        Console.WriteLine("Pole koła dla promienia równego " + r + " : " + myAplikacja.poleKola(r));
+        Console.WriteLine("Pole koła dla promienia równego " + r + " : " + poleKola(r));
         Console.WriteLine("=======================");
 
         var sumowanaLiczba = 123;
         Console.WriteLine("Argument funkcji sumaCyfr: " + sumowanaLiczba);
-        Console.WriteLine("sumaCyfr: " + myAplikacja.sumaCyfr(sumowanaLiczba));
+        Console.WriteLine("sumaCyfr: " + sumaCyfr(sumowanaLiczba));
         Console.WriteLine("=======================");
 
         Console.WriteLine("Tablica przed zamienElementy(): ");
@@ -49,7 +50,7 @@ public class Zadanie01
         }
         Console.WriteLine("");
 
-        tablica = myAplikacja.zamienElementy(tablica, 1, 2, 1);
+        tablica = zamienElementy(tablica, 1, 2, 1);
         Console.WriteLine("Tablica po zamienElementy(tablica, 1, 2, 1): ");
         for (int i = 0; i < tablica.Length; i++)
         {
@@ -60,7 +61,7 @@ public class Zadanie01
         {
             Console.WriteLine("");
             Console.WriteLine("Wpisz 0, aby zakończyć program: ");
-            var end = int.Parse(Console.ReadLine());
+            var end = int.Parse(Console.ReadLine() ?? string.Empty);
             if (end == 0)
             {
                 break;
@@ -68,7 +69,7 @@ public class Zadanie01
         }
     }
 
-    public int potega(int a, int b, int c)
+    public static int potega(int a, int b, int c)
     {
         if (c <= 0)
         {
@@ -83,7 +84,7 @@ public class Zadanie01
         return (int)Math.Pow(a, b);
     }
 
-    public int[] zapiszWTablicy(int[] tab, int a)
+    public static int[] zapiszWTablicy(int[] tab, int a)
     {
         int[] tablica = new int[tab.Length];
         for (int i = 0; i < tab.Length; i++)
@@ -95,12 +96,12 @@ public class Zadanie01
         return tablica;
     }
 
-    public double poleKola(double r)
+    public static double poleKola(double r)
     {
         return Math.PI * Math.Pow(r, 2);
     }
 
-    public string sumaCyfr(int liczba)
+    public static string sumaCyfr(int liczba)
     {
         if (liczba >= 100 && liczba <= 999)
         {
@@ -126,7 +127,7 @@ public class Zadanie01
             return "Podana liczba nie jest trzycyfrowa";
         }
     }
-    public int[] zamienElementy(int[] tab, int index1, int index2, int warunek)
+    public static int[] zamienElementy(int[] tab, int index1, int index2, int warunek)
     {
         if (index1 < 0 || index1 >= tab.Length || index2 < 0 || index2 >= tab.Length)
         {
