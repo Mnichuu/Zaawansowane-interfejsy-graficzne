@@ -6,23 +6,36 @@
         xmlns:local="clr-namespace:ZIG02"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="Wynik2">
-        <Button x:Name="BUTTONEK" Content="Button" HorizontalAlignment="Left" Margin="626,10,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#FF8AA590" Click="BUTTONEK_Click"/>
-        <Label x:Name="ETYKIETKA" Content="Etykieta" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="BUTTONEK1" Content="Button" HorizontalAlignment="Left" Margin="626,61,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#FF8AA590" Click="BUTTONEK_Click"/>
-        <Button x:Name="BUTTONEK2" Content="Button" HorizontalAlignment="Left" Margin="626,112,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#FF8AA590" Click="BUTTONEK_Click"/>
-        <Button x:Name="BUTTONEK3" Content="Button" HorizontalAlignment="Left" Margin="626,163,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#FF8AA590" Click="BUTTONEK_Click"/>
-        <Button x:Name="BUTTONEK4" Content="Button" HorizontalAlignment="Left" Margin="626,214,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#FF8AA590" Click="BUTTONEK_Click"/>
-        <Label x:Name="ETYKIETKA1" Content="Etykieta" HorizontalAlignment="Left" Margin="20,71,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="ETYKIETKA2" Content="Etykieta" HorizontalAlignment="Left" Margin="20,122,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="ETYKIETKA3" Content="Etykieta" HorizontalAlignment="Left" Margin="20,173,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="ETYKIETKA4" Content="Etykieta" HorizontalAlignment="Left" Margin="20,224,0,0" VerticalAlignment="Top"/>
+    <Grid>
+        <Button x:Name="BUTTONEK" Content="Potęga" HorizontalAlignment="Left" Margin="626,10,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#FF8AA590" Click="BUTTONEK_Click"/>
+        <Label x:Name="ETYKIETKA" Content="Potęga" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BUTTONEK1" Content="Pole koła" HorizontalAlignment="Left" Margin="626,61,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#FF8AA590" Click="BUTTONEK1_Click"/>
+        <Button x:Name="BUTTONEK2" Content="Zapisz w tablicy" HorizontalAlignment="Left" Margin="626,112,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#FF8AA590" Click="BUTTONEK2_Click"/>
+        <Button x:Name="BUTTONEK3" Content="Suma cyfr" HorizontalAlignment="Left" Margin="626,163,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#FF8AA590" Click="BUTTONEK3_Click"/>
+        <Button x:Name="BUTTONEK4" Content="Zamień elementy" HorizontalAlignment="Left" Margin="626,214,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#FF8AA590" Click="BUTTONEK4_Click"/>
+        <Label x:Name="ETYKIETKA1" Content="Pole koła" HorizontalAlignment="Left" Margin="20,71,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ETYKIETKA2" Content="Zapisz w tablicy" HorizontalAlignment="Left" Margin="20,122,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ETYKIETKA3" Content="Suma cyfr" HorizontalAlignment="Left" Margin="20,173,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ETYKIETKA4" Content="Zamień elementy" HorizontalAlignment="Left" Margin="20,224,0,0" VerticalAlignment="Top"/>
         <Label x:Name="ETYKIETKA_Kopiuj1" Content="b:" HorizontalAlignment="Left" Margin="218,20,0,0" VerticalAlignment="Top"/>
         <Label x:Name="ETYKIETKA_Kopiuj2" Content="c:" HorizontalAlignment="Left" Margin="307,20,0,0" VerticalAlignment="Top"/>
         <Label x:Name="ETYKIETKA_Kopiuj" Content="a:" HorizontalAlignment="Left" Margin="126,20,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBox_A" HorizontalAlignment="Left" Margin="150,24,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="53"/>
-        <TextBox x:Name="TextBox_B" HorizontalAlignment="Left" Margin="243,24,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="53"/>
-        <TextBox x:Name="TextBox_C" HorizontalAlignment="Left" Margin="330,24,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="53"/>
-        <Label x:Name="Wynik1" Content="Wynik" HorizontalAlignment="Left" Margin="400,20,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox_A" HorizontalAlignment="Left" Margin="150,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53"/>
+        <TextBox x:Name="TextBox_B" HorizontalAlignment="Left" Margin="243,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53"/>
+        <TextBox x:Name="TextBox_C" HorizontalAlignment="Left" Margin="330,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53"/>
+        <Label x:Name="Wynik" Content="Wynik" HorizontalAlignment="Left" Margin="400,20,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox_poleKola" HorizontalAlignment="Left" Margin="150,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53"/>
+        <Label x:Name="ETYKIETKA_R" Content="r:" HorizontalAlignment="Left" Margin="126,71,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Wynik1" Content="Wynik" HorizontalAlignment="Left" Margin="400,71,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox_A2" HorizontalAlignment="Left" Margin="150,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53"/>
+        <Label x:Name="Wynik2" Content="Wynik" HorizontalAlignment="Left" Margin="400,126,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox_sumaCyfr" HorizontalAlignment="Left" Margin="150,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53"/>
+        <Label x:Name="Wynik3" Content="Wynik" HorizontalAlignment="Left" Margin="400,177,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox_index1" HorizontalAlignment="Left" Margin="150,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53"/>
+        <TextBox x:Name="TextBox_index2" HorizontalAlignment="Left" Margin="243,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53"/>
+        <TextBox x:Name="TextBox_warunek" HorizontalAlignment="Left" Margin="330,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53"/>
+        <Label x:Name="Wynik4" Content="Wynik" HorizontalAlignment="Left" Margin="400,228,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox_Tablica" HorizontalAlignment="Left" Margin="150,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+        <Label x:Name="ETYKIETKA4_Kopiuj" Content="Podaj tablicę:" HorizontalAlignment="Left" Margin="20,275,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
