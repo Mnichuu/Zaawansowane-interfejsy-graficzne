@@ -6,6 +6,7 @@ public static class Zadanie01
 {
     public static void Main(string[] args)
     {
+        
         int[] tablica = new int[] { 1, 2, 3, 4, 5 };
 
         try

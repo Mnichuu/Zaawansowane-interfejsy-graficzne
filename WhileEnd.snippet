@@ -1,0 +1,34 @@
+﻿<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>WhileEnd</Title>
+    <Author>smnich</Author>
+    <Shortcut>wend</Shortcut>
+    <Description>Tworzy końcową pętle while oczekującą na 0 wprowadzone przez użytkownika</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>end</ID>
+        <ToolTip>Wartość końcowa</ToolTip>
+        <Default>0</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[
+while (true)
+{
+    Console.WriteLine("");
+    Console.WriteLine("Wpisz 0, aby zakończyć program: ");
+    var end = int.Parse(Console.ReadLine() ?? string.Empty);
+    if (end == $end$)
+    {
+        break;
+    }
+}
+]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>
