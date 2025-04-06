@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace GalacticTycoon.Events
 {
-    class EventResolver
-    {
+    public static class EventResolver {
+        public static void ResolveEvent(EventCard card, Player.Player player) {
+            card.ApplyEffect(player);
+        }
     }
 }

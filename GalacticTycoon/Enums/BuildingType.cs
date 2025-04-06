@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace GalacticTycoon.Enums
 {
-    class BuildingType
-    {
+    public enum BuildingType {
+        SpacePort,          // Port kosmiczny               DONE
+        Outpost,            // Posterunek                   DONE
+        Mine,               // Kopalnia                     DONE
+        MinePlus,           // Kopalnia w pasach asteroid   TODO
+        Farm,               // Farma                        DONE
+        Hotel,              // Sieci hoteli planetarnych    DONE
+        GalacticShipyard,   // Stocznia galaktyczna         TODO
+        Colony,             // Kolonia                      TODO
+        Residence           // Habitaty mieszkalne          TODO
+
     }
 }

@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace GalacticTycoon.Player
 {
-    class Inventory
-    {
+    public class Inventory {
+        public List<Buildings.Building> Buildings { get; set; }
+        public Inventory() {
+            Buildings = new List<Buildings.Building>();
+        }
+
+        public void AddBuilding(Buildings.Building building) {
+            Buildings.Add(building);
+        }
     }
 }

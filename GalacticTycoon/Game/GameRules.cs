@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace GalacticTycoon.Game
 {
-    class GameRules
-    {
+    public static class GameRules {
+        public static void BuildSpacePort(Player.Player player, Galaxy.Planet planet) {
+            if (planet.Owner == null) {
+                planet.SetOwner(player);
+                planet.AddBuilding(new Buildings.SpacePort());
+            }
+        }
+        // TODO : Implement the rest of the game rules
     }
 }

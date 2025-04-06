@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace GalacticTycoon.Enums
 {
-    class ResourceType
-    {
+    public enum ResourceType {
+        Credits,
+        Minerals,
+        Food
     }
 }

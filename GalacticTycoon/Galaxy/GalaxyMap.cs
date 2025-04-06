@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace GalacticTycoon.Galaxy
 {
-    class GalaxyMap
-    {
+    public class GalaxyMap {
+        public List<PlanetSystem> PlanetSystems { get; set; }
+        public GalaxyMap() {
+            PlanetSystems = new List<PlanetSystem>();
+        }
+        public void AddPlanetSystem(PlanetSystem system) {
+            PlanetSystems.Add(system);
+        }
     }
 }
