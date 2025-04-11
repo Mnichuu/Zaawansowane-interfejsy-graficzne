@@ -11,11 +11,18 @@ namespace GalacticTycoon.Buildings
         public Enums.BuildingType BuildingType { get; private set; }
         public int Level { get; protected set; }
 
+        public int Income { get; protected set; }
+
         protected Building(string name, Enums.BuildingType buildingType) {
             Name = name;
             BuildingType = buildingType;
             Level = 1;
+            Income = 5;
         }
-        public abstract void Upgrade();
+        public virtual void Upgrade() {
+            Level++;
+            Income += 5;
+        }
+
     }
 }

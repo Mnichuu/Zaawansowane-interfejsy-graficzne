@@ -15,7 +15,7 @@ namespace GalacticTycoon.Buildings
         }
         public override void Upgrade() {
             if (Level < 3) {
-                Level++;
+                base.Upgrade();
             } else {
                 throw new NotImplementedException();
             }
