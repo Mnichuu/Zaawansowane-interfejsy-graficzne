@@ -10,12 +10,12 @@ namespace GalacticTycoon.Enums
         SpacePort,          // Port kosmiczny               DONE
         Outpost,            // Posterunek                   DONE
         Mine,               // Kopalnia                     DONE
-        MinePlus,           // Kopalnia w pasach asteroid   TODO
+        MinePlus,           // Kopalnia w pasach asteroid   DONE
         Farm,               // Farma                        DONE
         Hotel,              // Sieci hoteli planetarnych    DONE
-        GalacticShipyard,   // Stocznia galaktyczna         TODO
-        Colony,             // Kolonia                      TODO
-        Residence           // Habitaty mieszkalne          TODO
+        GalacticShipyard,   // Stocznia galaktyczna         DONE
+        Colony,             // Kolonia                      DONE
+        Residence           // Habitaty mieszkalne          DONE
 
     }
 }
