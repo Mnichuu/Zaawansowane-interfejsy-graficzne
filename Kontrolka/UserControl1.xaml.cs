@@ -8,17 +8,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.Generic;
+using GalacticTycoon.Galaxy;
+using GalacticTycoon.Player;
 
 namespace Kontrolka;
 
-/// <summary>
-/// Interaction logic for UserControl1.xaml
-/// </summary>
 public partial class UserControl1 : UserControl
 {
-    public UserControl1()
+    private Player _player;
+    public UserControl1(Player player)
     {
         InitializeComponent();
+        _player = player;
+    }
+
+    private void Button_Click(object sender, RoutedEventArgs e) {
+        PlanetListBox.Items.Clear();
+
+        foreach (var planet in _player.OwnedPlanets) {
+            PlanetListBox.Items.Add(planet.Name);
+        }
     }
 }
 

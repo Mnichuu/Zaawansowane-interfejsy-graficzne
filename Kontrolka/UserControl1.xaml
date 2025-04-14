@@ -7,6 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <StackPanel>
+            <Button Content="Poka¿ przejête planety" Click="Button_Click" Margin="10" />
+            <ListBox x:Name="PlanetListBox" Margin="10"/>
+        </StackPanel>
     </Grid>
 </UserControl>
