@@ -1,0 +1,42 @@
+<UserControl x:Class="GameControl.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GameControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Informacje o graczu -->
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" Margin="10">
+            <TextBlock Text="Informacje o graczu" FontSize="16" FontWeight="Bold" />
+            <TextBlock x:Name="PlayerNameText" Text="Gracz: [Nazwa]" />
+            <TextBlock x:Name="CreditsText" Text="Kredyty: [Ilosc]" />
+            <TextBlock x:Name="PlanetCountText" Text="Przejete planety: [Ilosc]" />
+        </StackPanel>
+
+        <!-- Lista przejetych planet -->
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="10">
+            <TextBlock Text="Przejete planety" FontSize="16" FontWeight="Bold" />
+            <ListBox x:Name="PlanetListBox" SelectionChanged="PlanetListBox_SelectionChanged" />
+        </StackPanel>
+
+        <!-- Szczegoly planety -->
+        <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Margin="10">
+            <TextBlock Text="Szczegoly planety" FontSize="16" FontWeight="Bold" />
+            <TextBlock x:Name="SelectedPlanetNameText" Text="Planeta: [Nazwa]" />
+            <TextBlock x:Name="BuildingCountText" Text="Budynki: [Ilosc]" />
+            <Button Content="Buduj budynek" Click="BuildBuildingButton_Click" Margin="5" />
+            <Button Content="Ulepsz budynek" Click="UpgradeBuildingButton_Click" Margin="5" />
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -8,7 +8,7 @@ public static class Zadanie01
     {
         
         int[] tablica = new int[] { 1, 2, 3, 4, 5 };
-
+        
         try
         {
             Console.WriteLine("Argumenty funkcji potega: 2, 2, 2");

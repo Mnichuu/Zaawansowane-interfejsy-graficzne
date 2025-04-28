@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalacticTycoon", "GalacticT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kontrolka", "Kontrolka\Kontrolka.csproj", "{6AD6D016-FBD3-47AA-8D0D-E0F4C5AE5BD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameControl", "GameControl\GameControl.csproj", "{4D918001-CDED-4990-BC42-88AC3A033FB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{6AD6D016-FBD3-47AA-8D0D-E0F4C5AE5BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AD6D016-FBD3-47AA-8D0D-E0F4C5AE5BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AD6D016-FBD3-47AA-8D0D-E0F4C5AE5BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D918001-CDED-4990-BC42-88AC3A033FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D918001-CDED-4990-BC42-88AC3A033FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D918001-CDED-4990-BC42-88AC3A033FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D918001-CDED-4990-BC42-88AC3A033FB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
