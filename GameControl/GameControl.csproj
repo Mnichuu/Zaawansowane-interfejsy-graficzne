@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GalacticTycoon\GalacticTycoon.csproj" />
-    <ProjectReference Include="..\GameContainer\GameContainer.csproj" />
   </ItemGroup>
 
 </Project>

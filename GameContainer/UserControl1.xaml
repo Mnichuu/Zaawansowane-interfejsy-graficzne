@@ -3,42 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:GameContainer"
+             xmlns:local="clr-namespace:GameControl;assembly=GameControl"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <Grid>
-        <!-- Glowna struktura kontenera -->
+        <!-- Glowna struktura interfejsu -->
         <Grid.RowDefinitions>
             <RowDefinition Height="3*" />
             <!-- Mapa galaktyki -->
             <RowDefinition Height="1*" />
             <!-- Panel gracza -->
-            <RowDefinition Height="1*" />
-            <!-- Panel akcji -->
         </Grid.RowDefinitions>
 
-        <!-- Sekcja mapy galaktyki -->
-        <Border Grid.Row="0" Background="#1E1E2F" CornerRadius="10" Margin="10">
-            <TextBlock Text="Mapa Galaktyki" Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        </Border>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <!-- Mapa -->
+            <ColumnDefinition Width="1*" />
+            <!-- Panel akcji -->
+        </Grid.ColumnDefinitions>
 
-        <!-- Sekcja panelu gracza -->
-        <Border Grid.Row="1" Background="#2E2E3F" CornerRadius="10" Margin="10">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Gracz: " Foreground="White" FontSize="16" />
-                <TextBlock Text="TestPlayer" Foreground="LightBlue" FontSize="16" />
-                <TextBlock Text=" | Kredyty: " Foreground="White" FontSize="16" Margin="10,0,0,0" />
-                <TextBlock Text="1000" Foreground="LightGreen" FontSize="16" />
-            </StackPanel>
-        </Border>
+        <!-- Mapa galaktyki -->
+        <local:GalaxyMap Grid.Row="0" Grid.Column="0" Margin="0,0,0,0" />
 
-        <!-- Sekcja panelu akcji -->
-        <Border Grid.Row="2" Background="#3E3E4F" CornerRadius="10" Margin="10">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                <Button Content="Buduj" Width="100" Height="40" Background="#4CAF50" Foreground="White" />
-                <Button Content="Rozbuduj" Width="100" Height="40" Background="#2196F3" Foreground="White" />
-                <Button Content="Przejdz Ture" Width="100" Height="40" Background="#FF5722" Foreground="White" />
-            </StackPanel>
-        </Border>
+        <!-- Panel akcji -->
+        <StackPanel Grid.Row="0" Grid.Column="1" Background="#2E2E3F">
+            <TextBlock Text="Akcje" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,10" />
+            <Button Content="Podrozuj" Click="TravelButton_Click" Margin="0,5,0,5" />
+            <Button Content="Przejmij" Click="TakeOverButton_Click" Margin="0,5,0,5" />
+            <Button Content="Buduj" Click="BuildButton_Click" Margin="0,5,0,5" />
+            <Button Content="Rozbuduj" Click="UpgradeButton_Click" Margin="0,5,0,5" />
+            <Button Content="Losuj Karte" Click="DrawCardButton_Click" Margin="0,5,0,5" />
+        </StackPanel>
+
+        <!-- Panel gracza -->
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Background="#3E3E4F" Orientation="Horizontal">
+            <TextBlock Text="Gracz: " FontSize="14" Foreground="White" />
+            <TextBlock x:Name="PlayerName" Text="TestPlayer" FontSize="14" Foreground="LightBlue" Margin="5,0" />
+            <TextBlock Text=" | Kredyty: " FontSize="14" Foreground="White" Margin="10,0,0,0" />
+            <TextBlock x:Name="PlayerCredits" Text="1000" FontSize="14" Foreground="LightGreen" />
+            <TextBlock Text=" | Karty: " FontSize="14" Foreground="White" Margin="10,0,0,0" />
+            <TextBlock x:Name="PlayerCards" Text="0" FontSize="14" Foreground="LightYellow" />
+        </StackPanel>
     </Grid>
 </UserControl>

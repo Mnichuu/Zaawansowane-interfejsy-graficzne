@@ -5,17 +5,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GameControl"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="600">
     <Canvas Background="#1E1E2F">
         <!-- Układ planetarny 1 -->
-        <Ellipse Width="20" Height="20" Fill="LightBlue" Canvas.Left="100" Canvas.Top="100" />
-        <TextBlock Text="Układ 1" Foreground="White" Canvas.Left="125" Canvas.Top="100" />
+        <Ellipse Width="20" Height="20" Fill="LightBlue" Canvas.Left="41" Canvas.Top="145" />
+        <TextBlock Text="Układ 1" Foreground="White" Canvas.Left="66" Canvas.Top="145" />
 
         <!-- Układ planetarny 2 -->
-        <Ellipse Width="20" Height="20" Fill="LightGreen" Canvas.Left="300" Canvas.Top="200" />
-        <TextBlock Text="Układ 2" Foreground="White" Canvas.Left="325" Canvas.Top="200" />
+        <Ellipse Width="20" Height="20" Fill="LightGreen" Canvas.Left="241" Canvas.Top="245" />
+        <TextBlock Text="Układ 2" Foreground="White" Canvas.Left="266" Canvas.Top="245" />
 
-        <!-- Trasa między układami -->
-        <Line X1="110" Y1="110" X2="310" Y2="210" Stroke="Gray" StrokeThickness="2" />
+        <!-- Układ planetarny 3 -->
+        <Ellipse Width="20" Height="20" Fill="Orange" Canvas.Left="441" Canvas.Top="195" />
+        <TextBlock Text="Układ 3" Foreground="White" Canvas.Left="466" Canvas.Top="195" />
+
+        <!-- Układ planetarny 4 -->
+        <Ellipse Width="20" Height="20" Fill="Yellow" Canvas.Left="141" Canvas.Top="345" />
+        <TextBlock Text="Układ 4" Foreground="White" Canvas.Left="166" Canvas.Top="345" />
+
+        <!-- Układ planetarny 5 -->
+
+        <!-- Trasy między układami -->
+        <Line X1="110" Y1="110" X2="310" Y2="210" Stroke="Gray" StrokeThickness="2" Canvas.Left="-59" Canvas.Top="45" />
+        <Line X1="310" Y1="210" X2="510" Y2="160" Stroke="Gray" StrokeThickness="2" Canvas.Left="-59" Canvas.Top="45" />
+        <Line X1="110" Y1="110" X2="210" Y2="310" Stroke="Gray" StrokeThickness="2" Canvas.Left="-59" Canvas.Top="45" />
+        <Line X1="210" Y1="310" X2="510" Y2="160" Stroke="Gray" StrokeThickness="2" Canvas.Left="-59" Canvas.Top="45" />
     </Canvas>
 </UserControl>
