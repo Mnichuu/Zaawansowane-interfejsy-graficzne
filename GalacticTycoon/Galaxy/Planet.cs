@@ -12,6 +12,7 @@ namespace GalacticTycoon.Galaxy
         public string Name { get; set; }
         public Player.Player Owner { get; set; }
         public List<Buildings.Building> Buildings { get; set; }
+        public string Description { get; set; }
 
         public Planet(string name) {
             Name = name;

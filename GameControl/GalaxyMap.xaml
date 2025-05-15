@@ -5,30 +5,37 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GameControl"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="600">
+             d:DesignHeight="450" d:DesignWidth="533">
     <Canvas Background="#1E1E2F">
-        <!-- Układ planetarny 1 -->
-        <Ellipse Width="20" Height="20" Fill="LightBlue" Canvas.Left="41" Canvas.Top="145" />
-        <TextBlock Text="Układ 1" Foreground="White" Canvas.Left="66" Canvas.Top="145" />
+        <Button Width="20" Height="20" Canvas.Left="41" Canvas.Top="145" Background="#FFE23434" Click="PlanetClick" Tag="{Binding Planets[1]}"/>
+        <TextBlock Text="Planeta 1" Foreground="White" Canvas.Left="66" Canvas.Top="145" />
 
-        <!-- Układ planetarny 2 -->
-        <Ellipse Width="20" Height="20" Fill="LightGreen" Canvas.Left="241" Canvas.Top="245" />
-        <TextBlock Text="Układ 2" Foreground="White" Canvas.Left="266" Canvas.Top="245" />
+        <Button Width="20" Height="20" Canvas.Left="275" Canvas.Top="265" Background="#FFFDFF00" Click="PlanetClick" Tag="{Binding Planets[2]}"/>
+        <TextBlock Text="Planeta 2" Foreground="White" Canvas.Left="300" Canvas.Top="265" />
 
-        <!-- Układ planetarny 3 -->
-        <Ellipse Width="20" Height="20" Fill="Orange" Canvas.Left="441" Canvas.Top="195" />
-        <TextBlock Text="Układ 3" Foreground="White" Canvas.Left="466" Canvas.Top="195" />
+        <Button Width="20" Height="20" Canvas.Left="395" Canvas.Top="152" Background="#FF00FFED" Click="PlanetClick" Tag="{Binding Planets[3]}"/>
+        <TextBlock Text="Planeta 3" Foreground="White" Canvas.Left="420" Canvas.Top="152" />
 
-        <!-- Układ planetarny 4 -->
-        <Ellipse Width="20" Height="20" Fill="Yellow" Canvas.Left="141" Canvas.Top="345" />
-        <TextBlock Text="Układ 4" Foreground="White" Canvas.Left="166" Canvas.Top="345" />
+        <Button Width="20" Height="20" Canvas.Left="102" Canvas.Top="355" Background="#FF19BD23" Click="PlanetClick" Tag="{Binding Planets[4]}"/>
+        <TextBlock Text="Planeta 4" Foreground="White" Canvas.Left="127" Canvas.Top="355" />
 
-        <!-- Układ planetarny 5 -->
+        <Button Width="20" Height="20" Canvas.Left="341" Canvas.Top="75" Background="#FF8A2BE2" Click="PlanetClick" Tag="{Binding Planets[5]}"/>
+        <TextBlock Text="Planeta 5" Foreground="White" Canvas.Left="366" Canvas.Top="75" />
 
-        <!-- Trasy między układami -->
-        <Line X1="110" Y1="110" X2="310" Y2="210" Stroke="Gray" StrokeThickness="2" Canvas.Left="-59" Canvas.Top="45" />
-        <Line X1="310" Y1="210" X2="510" Y2="160" Stroke="Gray" StrokeThickness="2" Canvas.Left="-59" Canvas.Top="45" />
-        <Line X1="110" Y1="110" X2="210" Y2="310" Stroke="Gray" StrokeThickness="2" Canvas.Left="-59" Canvas.Top="45" />
-        <Line X1="210" Y1="310" X2="510" Y2="160" Stroke="Gray" StrokeThickness="2" Canvas.Left="-59" Canvas.Top="45" />
+        <Button Width="20" Height="20" Canvas.Left="401" Canvas.Top="225" Background="#FFFFA500" Click="PlanetClick" Tag="{Binding Planets[6]}"/>
+        <TextBlock Text="Planeta 6" Foreground="White" Canvas.Left="426" Canvas.Top="225" />
+
+        <Button Width="20" Height="20" Canvas.Left="41" Canvas.Top="45" Background="#FF00CED1" Click="PlanetClick" Tag="{Binding Planets[7]}"/>
+        <TextBlock Text="Planeta 7" Foreground="White" Canvas.Left="66" Canvas.Top="45" />
+
+        <Button Width="20" Height="20" Canvas.Left="449" Canvas.Top="32" Background="#FFADFF2F" Click="PlanetClick" Tag="{Binding Planets[8]}"/>
+        <TextBlock Text="Planeta 8" Foreground="White" Canvas.Left="474" Canvas.Top="32" />
+
+        <Button Width="20" Height="20" Canvas.Left="441" Canvas.Top="345" Background="#FFDC143C" Click="PlanetClick" Tag="{Binding Planets[9]}"/>
+        <TextBlock Text="Planeta 9" Foreground="White" Canvas.Left="466" Canvas.Top="345" />
+
+        <Button Width="20" Height="20" Canvas.Left="141" Canvas.Top="75" Background="#FF7FFF00" Click="PlanetClick" Tag="{Binding Planets[10]}"/>
+        <TextBlock Text="Planeta 10" Foreground="White" Canvas.Left="166" Canvas.Top="75" />
+
     </Canvas>
 </UserControl>
