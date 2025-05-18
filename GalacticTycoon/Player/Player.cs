@@ -35,5 +35,9 @@ namespace GalacticTycoon.Player
                 Console.WriteLine("Not enough credits!");
             }
         }
+
+        public int GetTotalIncome() {
+            return OwnedPlanets.Sum(planet => planet.GetTotalIncome());
+        }
     }
 }

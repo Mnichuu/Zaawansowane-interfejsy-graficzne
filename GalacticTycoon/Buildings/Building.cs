@@ -16,7 +16,7 @@ namespace GalacticTycoon.Buildings
         protected Building(string name, Enums.BuildingType buildingType) {
             Name = name;
             BuildingType = buildingType;
-            Level = 1;
+            Level = 0;
             Income = 5;
         }
         public virtual void Upgrade() {

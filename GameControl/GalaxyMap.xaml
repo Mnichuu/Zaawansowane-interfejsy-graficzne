@@ -6,32 +6,32 @@
              xmlns:local="clr-namespace:GameControl"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="533">
-    <Canvas Background="#1E1E2F">
-        <Button Width="20" Height="20" Canvas.Left="41" Canvas.Top="145" Background="#FFE23434" Click="PlanetClick" Tag="{Binding Planets[1]}"/>
+    <Canvas x:Name="PlanetButton10" Background="#1E1E2F">
+        <Button x:Name="PlanetButton1" Width="20" Height="20" Canvas.Left="41" Canvas.Top="145" Background="#FFE23434" Click="PlanetClick" Tag="{Binding Planets[1]}"/>
         <TextBlock Text="Planeta 1" Foreground="White" Canvas.Left="66" Canvas.Top="145" />
 
-        <Button Width="20" Height="20" Canvas.Left="275" Canvas.Top="265" Background="#FFFDFF00" Click="PlanetClick" Tag="{Binding Planets[2]}"/>
+        <Button x:Name="PlanetButton2" Width="20" Height="20" Canvas.Left="275" Canvas.Top="265" Background="#FFFDFF00" Click="PlanetClick" Tag="{Binding Planets[2]}"/>
         <TextBlock Text="Planeta 2" Foreground="White" Canvas.Left="300" Canvas.Top="265" />
 
-        <Button Width="20" Height="20" Canvas.Left="395" Canvas.Top="152" Background="#FF00FFED" Click="PlanetClick" Tag="{Binding Planets[3]}"/>
+        <Button x:Name="PlanetButton3" Width="20" Height="20" Canvas.Left="395" Canvas.Top="152" Background="#FF00FFED" Click="PlanetClick" Tag="{Binding Planets[3]}"/>
         <TextBlock Text="Planeta 3" Foreground="White" Canvas.Left="420" Canvas.Top="152" />
 
-        <Button Width="20" Height="20" Canvas.Left="102" Canvas.Top="355" Background="#FF19BD23" Click="PlanetClick" Tag="{Binding Planets[4]}"/>
+        <Button x:Name="PlanetButton4" Width="20" Height="20" Canvas.Left="102" Canvas.Top="355" Background="#FF19BD23" Click="PlanetClick" Tag="{Binding Planets[4]}"/>
         <TextBlock Text="Planeta 4" Foreground="White" Canvas.Left="127" Canvas.Top="355" />
 
-        <Button Width="20" Height="20" Canvas.Left="341" Canvas.Top="75" Background="#FF8A2BE2" Click="PlanetClick" Tag="{Binding Planets[5]}"/>
+        <Button x:Name="PlanetButton5" Width="20" Height="20" Canvas.Left="341" Canvas.Top="75" Background="#FF8A2BE2" Click="PlanetClick" Tag="{Binding Planets[5]}"/>
         <TextBlock Text="Planeta 5" Foreground="White" Canvas.Left="366" Canvas.Top="75" />
 
-        <Button Width="20" Height="20" Canvas.Left="401" Canvas.Top="225" Background="#FFFFA500" Click="PlanetClick" Tag="{Binding Planets[6]}"/>
+        <Button x:Name="PlanetButton6" Width="20" Height="20" Canvas.Left="401" Canvas.Top="225" Background="#FFFFA500" Click="PlanetClick" Tag="{Binding Planets[6]}"/>
         <TextBlock Text="Planeta 6" Foreground="White" Canvas.Left="426" Canvas.Top="225" />
 
-        <Button Width="20" Height="20" Canvas.Left="41" Canvas.Top="45" Background="#FF00CED1" Click="PlanetClick" Tag="{Binding Planets[7]}"/>
+        <Button x:Name="PlanetButton7" Width="20" Height="20" Canvas.Left="41" Canvas.Top="45" Background="#FF00CED1" Click="PlanetClick" Tag="{Binding Planets[7]}"/>
         <TextBlock Text="Planeta 7" Foreground="White" Canvas.Left="66" Canvas.Top="45" />
 
-        <Button Width="20" Height="20" Canvas.Left="449" Canvas.Top="32" Background="#FFADFF2F" Click="PlanetClick" Tag="{Binding Planets[8]}"/>
+        <Button x:Name="PlanetButton8" Width="20" Height="20" Canvas.Left="449" Canvas.Top="32" Background="#FFADFF2F" Click="PlanetClick" Tag="{Binding Planets[8]}"/>
         <TextBlock Text="Planeta 8" Foreground="White" Canvas.Left="474" Canvas.Top="32" />
 
-        <Button Width="20" Height="20" Canvas.Left="441" Canvas.Top="345" Background="#FFDC143C" Click="PlanetClick" Tag="{Binding Planets[9]}"/>
+        <Button x:Name="PlanetButton9" Width="20" Height="20" Canvas.Left="441" Canvas.Top="345" Background="#FFDC143C" Click="PlanetClick" Tag="{Binding Planets[9]}"/>
         <TextBlock Text="Planeta 9" Foreground="White" Canvas.Left="466" Canvas.Top="345" />
 
         <Button Width="20" Height="20" Canvas.Left="141" Canvas.Top="75" Background="#FF7FFF00" Click="PlanetClick" Tag="{Binding Planets[10]}"/>

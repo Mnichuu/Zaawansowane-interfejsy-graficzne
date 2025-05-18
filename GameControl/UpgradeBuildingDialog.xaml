@@ -1,0 +1,19 @@
+﻿<Window x:Class="GameControl.UpgradeBuildingDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameControl"
+        mc:Ignorable="d"
+        Title="Wybierz budynek do ulepszenia" Height="300" Width="350" WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="10">
+        <TextBlock x:Name="PlanetNameText" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+        <ItemsControl x:Name="BuildingsList">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Content="{Binding Name}" Margin="0,2" Click="UpgradeButton_Click"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
+</Window>

@@ -28,10 +28,7 @@
         <!-- Panel akcji -->
         <StackPanel Grid.Row="0" Grid.Column="1" Background="#2E2E3F">
             <TextBlock Text="Akcje" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,10" />
-            <Button Content="Podrozuj" Click="TravelButton_Click" Margin="0,5,0,5" />
             <Button Content="Przejmij" Click="TakeOverButton_Click" Margin="0,5,0,5" />
-            <Button Content="Buduj" Click="BuildButton_Click" Margin="0,5,0,5" />
-            <Button Content="Rozbuduj" Click="UpgradeButton_Click" Margin="0,5,0,5" />
             <Button Content="Losuj Karte" Click="DrawCardButton_Click" Margin="0,5,0,5" />
         </StackPanel>
 

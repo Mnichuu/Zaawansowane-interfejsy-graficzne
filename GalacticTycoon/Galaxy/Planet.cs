@@ -27,5 +27,8 @@ namespace GalacticTycoon.Galaxy
         public void AddBuilding(Buildings.Building building) {
             Buildings.Add(building);
         }
+        public int GetTotalIncome() {
+            return Buildings?.Sum(b => b.Income) ?? 0;
+        }
     }
 }

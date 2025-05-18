@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GalacticTycoon.Buildings;
 using GalacticTycoon.Galaxy;
+using GalacticTycoon.Player;
 
 namespace GameControl {
     /// <summary>
@@ -21,6 +22,8 @@ namespace GameControl {
     /// </summary>
     public partial class GalaxyMap : UserControl {
         private PlanetSystem planetarySystem;
+        private Planet selectedPlanet;
+        private Player player;
 
         public GalaxyMap() {
             InitializeComponent();
@@ -29,39 +32,58 @@ namespace GameControl {
 
         private void CreatePlanetarySystem() {
             planetarySystem = new PlanetSystem("System Planetarny 1");
-
-            // Tworzenie 10 planet
             for (int i = 1; i <= 10; i++) {
                 var planet = new Planet($"Planeta {i}") {
                     Description = $"Opis Planety {i}",
                     Buildings = new List<Building> {
-                        new Farm(),
-                        new Hotel(),
-                        new GalacticShipyard(),
-                        new Mine(),
-                        new SpacePort()
-                    }
+                new Farm(),
+                new Hotel(),
+                new GalacticShipyard(),
+                new Mine(),
+                new SpacePort()
+            }
                 };
                 planetarySystem.AddPlanet(planet);
             }
+
+            // Przypisz planety do przycisków
+            PlanetButton1.DataContext = planetarySystem.Planets[0];
+            PlanetButton2.DataContext = planetarySystem.Planets[1];
+            PlanetButton3.DataContext = planetarySystem.Planets[2];
+            PlanetButton4.DataContext = planetarySystem.Planets[3];
+            PlanetButton5.DataContext = planetarySystem.Planets[4];
+            PlanetButton6.DataContext = planetarySystem.Planets[5];
+            PlanetButton7.DataContext = planetarySystem.Planets[6];
+            PlanetButton8.DataContext = planetarySystem.Planets[7];
+            PlanetButton9.DataContext = planetarySystem.Planets[8];
+            PlanetButton10.DataContext = planetarySystem.Planets[9];
         }
 
         private void PlanetClick(object sender, RoutedEventArgs e) {
             if (sender is FrameworkElement element && element.DataContext is Planet planet) {
-                ShowBuildableItems(planet);
+                selectedPlanet = planet;
+                ShowPlanetDetails(planet);
             }
         }
 
-        private static void ShowBuildableItems(Planet planet) {
-            var buildableItems = planet.Buildings;
+        private void ShowPlanetDetails(Planet planet) {
+            var dialog = new UpgradeBuildingDialog(planet.Name, planet.Buildings);
+            dialog.Owner = Window.GetWindow(this);
+            if (dialog.ShowDialog() == true && dialog.SelectedBuilding != null) {
+                if (dialog.SelectedBuilding.Level == 0) {
+                    dialog.SelectedBuilding.Upgrade();
+                    MessageBox.Show(
+                        $"Zbudowano: {dialog.SelectedBuilding.Name}",
+                        "Akcja", MessageBoxButton.OK, MessageBoxImage.Information);
+                } else {
+                    dialog.SelectedBuilding.Upgrade();
+                    MessageBox.Show(
+                        $"Rozbudowano: {dialog.SelectedBuilding.Name} do poziomu {dialog.SelectedBuilding.Level}",
+                        "Akcja", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
 
-            // Wyświetlenie listy budynków w oknie dialogowym
-            var message = $"Budynki na {planet.Name}:\n";
-            foreach (var building in buildableItems) {
-                message += $"- {building.Name} (Poziom: {building.Level})\n";
+
             }
-
-            MessageBox.Show(message, $"Budynki na {planet.Name}", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
