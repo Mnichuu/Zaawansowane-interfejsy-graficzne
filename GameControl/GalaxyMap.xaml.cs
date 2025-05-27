@@ -23,7 +23,6 @@ namespace GameControl {
     public partial class GalaxyMap : UserControl {
         private PlanetSystem planetarySystem;
         private Planet selectedPlanet;
-        private Player player;
 
         public GalaxyMap() {
             InitializeComponent();
@@ -85,5 +84,6 @@ namespace GameControl {
 
             }
         }
+
     }
 }

@@ -13,15 +13,19 @@ namespace GalacticTycoon.Buildings
 
         public int Income { get; protected set; }
 
+        public int Cost { get; set; }
+
         protected Building(string name, Enums.BuildingType buildingType) {
             Name = name;
             BuildingType = buildingType;
             Level = 0;
             Income = 5;
+            Cost = 100;
         }
         public virtual void Upgrade() {
             Level++;
             Income += 5;
+            
         }
 
     }

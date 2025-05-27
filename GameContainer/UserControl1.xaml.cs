@@ -1,3 +1,6 @@
+using GalacticTycoon.Events;
+using GalacticTycoon.Galaxy;
+using GalacticTycoon.Player;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,8 +17,16 @@ namespace GameContainer {
     /// Interaction logic for UserControl1.xaml
     /// </summary>
     public partial class UserControl1 : UserControl {
+        private EventDeck _eventDeck;
+        private Player _player;
+
         public UserControl1() {
             InitializeComponent();
+            _eventDeck = new EventDeck();
+            _player = new Player("Gracz 1");
+            PlayerName.Text = _player.Name;
+            PlayerCredits.Text = _player.GalacticCredits.ToString();
+            PlayerCards.Text = _player.EventCards.Count.ToString();
         }
         // Obs³uga przycisku "Podró¿uj"
         private void TravelButton_Click(object sender, RoutedEventArgs e) {
@@ -39,8 +50,21 @@ namespace GameContainer {
 
         // Obs³uga przycisku "Losuj Kartê"
         private void DrawCardButton_Click(object sender, RoutedEventArgs e) {
-            MessageBox.Show("Losujesz kartê z talii.");
+            _eventDeck.AddCard(new PirateAttackCard());
+            _eventDeck.AddCard(new DefenseAgainstPiratesCard());
+            _eventDeck.AddCard(new GalacticTicketCard());
+            _eventDeck.AddCard(new TaxCard());
+            
+            var card = _eventDeck.DrawCard();
+            _player.EventCards.Add(card);
+            
+            if (card != null) {
+                MessageBox.Show($"Wylosowano kartê: {card.Name}");
+            } else {
+                MessageBox.Show("Nie uda³o siê wylosowaæ karty.");
+            }
         }
+
     }
 
 }

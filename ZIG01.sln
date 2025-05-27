@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZIG11-APP", "ZIG11-APP\ZIG1
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ZIG12", "ZIG12\ZIG12.esproj", "{0286DF5B-D158-B5BA-9282-A7010A729281}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZIG13", "ZIG13\ZIG13.csproj", "{8754773C-5484-468A-8C94-57350C2E4A1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{0286DF5B-D158-B5BA-9282-A7010A729281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0286DF5B-D158-B5BA-9282-A7010A729281}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0286DF5B-D158-B5BA-9282-A7010A729281}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8754773C-5484-468A-8C94-57350C2E4A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8754773C-5484-468A-8C94-57350C2E4A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8754773C-5484-468A-8C94-57350C2E4A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8754773C-5484-468A-8C94-57350C2E4A1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

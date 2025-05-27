@@ -40,7 +40,7 @@
         <!-- Panel gracza -->
         <StackPanel Grid.Row="1" Background="#3E3E4F" Orientation="Horizontal">
             <TextBlock Text="Gracz: " FontSize="14" Foreground="White" />
-            <TextBlock x:Name="PlayerName" Text="TestPlayer" FontSize="14" Foreground="LightBlue" Margin="5,0" />
+            <TextBlock x:Name="PlayerName" Text="" FontSize="14" Foreground="LightBlue" Margin="5,0" />
             <TextBlock Text=" | Kredyty: " FontSize="14" Foreground="White" Margin="10,0,0,0" />
             <TextBlock x:Name="PlayerCredits" Text="1000" FontSize="14" Foreground="LightGreen" />
             <TextBlock Text=" | Karty: " FontSize="14" Foreground="White" Margin="10,0,0,0" />
