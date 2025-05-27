@@ -1,10 +1,91 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Gitary i instrumenty muzyczne";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Gitary i instrumenty muzyczne</h1>
+    <p>
+        Witamy na stronie poświęconej gitarom oraz innym instrumentom muzycznym!<br />
+        Znajdziesz tu ciekawostki, opisy oraz zdjęcia najpopularniejszych instrumentów.
+    </p>
+
+    <h2>Popularne instrumenty</h2>
+    <ul class="list-unstyled">
+        <li>
+            <strong>Gitara klasyczna</strong> – instrument strunowy, idealny do nauki i gry solowej.
+        </li>
+        <li>
+            <strong>Gitara elektryczna</strong> – wykorzystywana w rocku, bluesie i jazzie.
+        </li>
+        <li>
+            <strong>Pianino</strong> – wszechstronny instrument klawiszowy.
+        </li>
+        <li>
+            <strong>Skrzypce</strong> – instrument smyczkowy o pięknym, ciepłym brzmieniu.
+        </li>
+        <li>
+            <strong>Perkusja</strong> – zestaw instrumentów rytmicznych.
+        </li>
+    </ul>
+
+    <h2>Ciekawostki o gitarach</h2>
+    <ul style="max-width:600px; margin:auto; text-align:left;">
+        <li>Pierwsze gitary powstały już w XVI wieku w Hiszpanii.</li>
+        <li>Najdroższa gitara świata została sprzedana za ponad 6 milionów dolarów.</li>
+        <li>Gitara elektryczna zrewolucjonizowała muzykę rozrywkową XX wieku.</li>
+    </ul>
+
+    <h2>Porównanie gitar</h2>
+    <table class="table table-bordered" style="margin:auto; max-width:700px;">
+        <thead>
+            <tr>
+                <th>Typ gitary</th>
+                <th>Brzmienie</th>
+                <th>Zastosowanie</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Klasyczna</td>
+                <td>Ciepłe, łagodne</td>
+                <td>Muzyka klasyczna, flamenco</td>
+            </tr>
+            <tr>
+                <td>Elektryczna</td>
+                <td>Mocne, zróżnicowane</td>
+                <td>Rock, blues, jazz</td>
+            </tr>
+            <tr>
+                <td>Akustyczna</td>
+                <td>Jasne, donośne</td>
+                <td>Folk, pop, country</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Galeria</h2>
+    <div>
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80" alt="Gitara" style="width:200px; margin:10px;" />
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Pianino" style="width:200px; margin:10px;" />
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Skrzypce" style="width:200px; margin:10px;" />
+    </div>
+
+    <h2>Kontakt</h2>
+    <form style="max-width:500px; margin:auto; text-align:left;">
+        <div class="form-group">
+            <label for="name">Imię:</label>
+            <input type="text" class="form-control" id="name" placeholder="Wpisz swoje imię" />
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" class="form-control" id="email" placeholder="Wpisz swój e-mail" />
+        </div>
+        <div class="form-group">
+            <label for="message">Wiadomość:</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Twoja wiadomość"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Wyślij</button>
+    </form>
 </div>
